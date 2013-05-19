@@ -26,7 +26,7 @@
 
 % personal data
 \name{Aleksey}{Uymanov}
-%% \title{a Haskell programer}                               % optional, remove / comment the line if not wanted
+%% \title{Resum`e}                               % optional, remove / comment the line if not wanted
 \address{}{Tyumen}{Russian Federation}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 %% \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
 %% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
@@ -34,7 +34,7 @@
 \email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
 %% \extrainfo{Jabber: segfault@jabber.ru}
 %% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\extrainfo{Social status: single}
+%% \extrainfo{Social status: single}
 %% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
 
@@ -56,31 +56,64 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2003--2007}{Bachelor}{Tyumen Oil and Gas Institute}{Tyumen}{\textit{5/5}}{Department of Applied Mechanics}  % arguments 3 to 6 can be left empty
-\cventry{2007--2009}{Master}{Tyumen Oil and Gas Institute}{Tyumen}{\textit{5/5}}{Department of Applied Mechanics}
+\cventry{2007--2009}{Master}{Tyumen Oil and Gas
+  Institute}{Tyumen}{\textit{5/5}}{Department of Applied Mechanics}
 
-%% \section{Master thesis}
-%% \cvitem{title}{\emph{Title}}
-%% \cvitem{supervisors}{Supervisors}
-%% \cvitem{description}{Short thesis abstract}
+\cventry{2003--2007}{Bachelor}{Tyumen Oil and Gas
+  Institute}{Tyumen}{\textit{5/5}}{Department of Applied Mechanics}
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{2006--2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
-\cventry{2007--2009}{Design Engineer}{Jsc Sibneftemash}{Tyumen}{}{Calculation of the design process tanks}
-\cventry{2009--2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{}
+
+\cventry{2013 (current employment)}{Embedded system
+  programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma
+  cutting machine}
+
 \cventry{2012--2013}{Web programmer}{Iris Integration}{Tyumen}{}{Developing web sites:%
   \begin{itemize}%
   \item Ruby on Rails project developer \href{http://qrgolos.ru}{qrgolos.ru}
   \item PHP with Mediawiki project developer \href{http://qrgorod.com}{qrgorod.com}
   \end{itemize}}
-\cventry{2013 (current employment)}{Embedded system programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma cutting machine}
+
+\cventry{2009--2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{}
+
+\cventry{2007--2009}{Design Engineer}{Jsc Sibneftemash}{Tyumen}{}{Calculation of
+  the design process tanks}
+
+\cventry{2006--2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
+
 \subsection{Projects}
-\cventry{2011--2012}{Track Deal}{Python}{}{}{%
-  Developing Python program for tracking stock market operations.  I developed
-  this program for myself because there was no good Open Source trader log
-  program.\newline{}Here is the repository:
-  \href{https://github.com/s9gf4ult/track-deal}{github.com/s9gf4ult/track-deal}}
+    
+\cventry {2013 (currently working on)}{HDBC-postgresql}{Haskell}{}{}{%
+  Develping the driver for HDBC
+  \href{https://github.com/hdbc/hdbc-postgresql}{github.com/hdbc/hdbc-postgresql}:
+  Driver now uses postgresql-libpq to talk with database. No dirty C hacks and
+  direct unsafe FFI calls any more. Driver now takes just 522 (for now) lines of
+  code. Tests are not ready for now and there is some problems.\newline{}Here is
+  my fork:
+  \href{https://github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}{github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}}
+
+\cventry {2013 (currently working on)}{HDBC}{Haskell}{}{}{%
+  Developing new \href{https://github.com/hdbc/hdbc}{github.com/hdbc/hdbc}.
+  Reduced \textbf{SqlValue} constructors to minimal set, added
+  \textbf{Connection} and \textbf{Statement} typeclasses with type families to
+  make HDBC as flexible as posible. Patches are not accepted yet.\newline{}Here
+  is my fork: \href{https://github.com/s9gf4ult/hdbc}{github.com/s9gf4ult/hdbc}}
+    
+\cventry {2013}{quickcheck-assertions}{Haskell}{}{}{%
+  Create package for property-based testing with
+  \href{https://github.com/nick8325/quickcheck}{QuickCheck}.
+  \href{https://github.com/s9gf4ult/quickcheck-assertions}{github.com/s9gf4ult/quickcheck-assertions}
+  allows user to use pretty-printing assertions for more readable test
+  results. It is
+  \href{http://hackage.haskell.org/package/quickcheck-assertions}{available} on
+  Hackage.}
+    
+\cventry {2013}{Convertible}{Haskell}{}{}{%
+  \href{https://github.com/hdbc/convertible}{github.com/hdbc/convertible}: added
+  the Decimal instances, performed common code cleaning with tests
+  improving. Patches is not accepted yet.\newline{}Here is my fork:
+  \href{https://github.com/s9gf4ult/convertible}{github.com/s9gf4ult/convertible}}
 
 \cventry {2013}{Haskell-Decimal}{Haskell}{}{}{%
   \href{https://github.com/PaulJohnson/Haskell-Decimal}{github.com/PaulJohnson/Haskell-Decimal}
@@ -92,51 +125,28 @@
     there is no actually usable changes, just some instances to support new
     types in persistent fields.}
     
-\cventry {2013}{Convertible}{Haskell}{}{}{%
-  \href{https://github.com/hdbc/convertible}{github.com/hdbc/convertible}: added
-  the Decimal instances, performed common code cleaning with tests
-  improving. Patches is not accepted yet.\newline{}Here is my repository fork:
-  \href{https://github.com/s9gf4ult/convertible}{github.com/s9gf4ult/convertible}}
-    
-\cventry {2013 (currently working on)}{HDBC}{Haskell}{}{}{%
-  Developing new \href{https://github.com/hdbc/hdbc}{github.com/hdbc/hdbc}:
-  reduced \textbf{SqlValue} constructors to minimal set, added
-  \textbf{Connection} and \textbf{Statement} typeclasses with type families to
-  make HDBC as flexible as posible. Patches are not accepted yet.\newline{}Here
-  is my fork: \href{https://github.com/s9gf4ult/hdbc}{github.com/s9gf4ult/hdbc}}
-    
-    
-\cventry {2013 (currently working on)}{HDBC-postgresql}{Haskell}{}{}{%
-  Develping the driver for HDBC
-  \href{https://github.com/hdbc/hdbc-postgresql}{github.com/hdbc/hdbc-postgresql}:
-  Driver now uses postgresql-libpq to talk with database. No dirty C hacks and
-  direct unsafe FFI calling any more. Driver now takes just 522 (for now) lines
-  of code. Tests are not ready for now and there is some problems.\newline{}Here
-  is my fork:
-  \href{https://github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}{s9gf4ult/hdbc-postgresql/tree/newsqlvalue}}
-    
-\cventry {2013}{quickcheck-assertions}{Haskell}{}{}{%
-  Create package for property-based testing with
-  \href{https://github.com/nick8325/quickcheck}{QuickCheck}.
-  \href{https://github.com/s9gf4ult/quickcheck-assertions}{github.com/s9gf4ult/quickcheck-assertions}
-  allows user to use pretty-printing assertions for more readable test
-  results. It is
-  \href{http://hackage.haskell.org/package/quickcheck-assertions}{available} on
-  Hackage.}
-
-\section{Languages}
-\cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
-\cvitemwithcomment{Russian}{Native}{}
+\cventry{2011--2012}{Track Deal}{Python}{}{}{%
+  Developed Python program for tracking stock market operations.  I created
+  this program for myself because there was no good Open Source trader log
+  program.\newline{}Here is the repository:
+  \href{https://github.com/s9gf4ult/track-deal}{github.com/s9gf4ult/track-deal}}
 
 \section{Computer skills}
 \cvitem{Linux}{%
-  Experienced Linux user, using Linux for serveral years (gentoo).}
+  Experienced Linux user and administrator:
+  \begin{itemize}
+  \item Virtualisation (kvm, vbox)
+  \item Networking (iptables, routing, traffic shaping)
+  \item Control Groups (resource limitations by process)
+  \item Kernel configuration and building
+  \item Data storage (LVM, RAID, iSCSI)
+  \end{itemize}}
 \cvitem{Databases}{%
   \begin{itemize}
   \item Solid SQL skills
   \item Good knowledge of low-level C libraries (especially
     PostgreSQL-libpq and SQLite)
-  \end{itemize}}
+  \end{itemize}}%
 \cvitem{Python}{%
   Solid Python skills. Good knowledge of PyGtk and Django}
 \cvitem{Ruby}{%
@@ -153,6 +163,15 @@
   \item Resource management (ResourceT)
   \item Foreign Function Interface
   \end{itemize}}
+
+\section{Languages}
+\cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
+\cvitemwithcomment{Russian}{Native}{}
+
+\section{Personal}
+\cvitem{Age}{26}
+\cvitem{Social Status}{Single}
+
 
 %% \section{Interests}
 %% \cvitem{Haskell}{Programming}
