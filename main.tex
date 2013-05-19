@@ -77,42 +77,53 @@
 \cventry{2013 (current employment)}{Embedded system programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma cutting machine}
 \subsection{Projects}
 \cventry{2011--2012}{Track Deal}{Python}{}{}{%
-  Developing Python program for tracking stock market operations.
-  I developed this program for myself because there was no good Open Source trader log program.\newline{}%
-  Here is the repository: \href{https://github.com/s9gf4ult/track-deal}{github.com/s9gf4ult/track-deal}}
-\cventry{2012 until now}{Exploring Haskell}{}{}{}{%
-  Exploring the Haskell and contributing to Open Source libraries:%
-  \begin{itemize}
-  \item Contributing to
-    \href{https://github.com/PaulJohnson/Haskell-Decimal}{Haskell-Decimal}:
-    improved testing, found and fixed multiplication bug, added instances to
-    make posible to input literal Decimals.
-  \item Contributing to
-    \href{https://github.com/yesodweb/persistent}{persistent}: there is no
-    actually usable changes, just some instances to support new types in
-    persistent fields.
-  \item Patching \href{https://github.com/hdbc/convertible}{Convertible}: added
-    the Decimal instances, performed common code cleaning with tests
-    improving. Patches is not accepted yet.\newline{}Here is my repository fork:
-    \href{https://github.com/s9gf4ult/convertible}{github.com/s9gf4ult/convertible}
-  \item Developing new \href{https://github.com/hdbc/hdbc}{HDBC}: changed
-    SqlValue constructors to minimal set, added Connection and Statement
-    typeclasses with type families to make HDBC as flexible as posible. Patches
-    are not accepted yet.\newline{}Here is my fork:
-    \href{https://github.com/s9gf4ult/hdbc}{github.com/s9gf4ult/hdbc}
-  \item Develping the driver for HDBC
-    \href{https://github.com/hdbc/hdbc-postgresql}{hdbc-postgresql}: Driver now
-    uses postgresql-libpq to talk with database. No dirty C hacks and direct
-    unsafe FFI calling any more. Driver now takes just 522 (for now) lines of
-    code. Tests are not ready for now and there is some problems.\newline{}Here
-    is my fork:
-    \href{https://github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}{s9gf4ult/hdbc-postgresql/tree/newsqlvalue}
-  \item Writing my own package
-    \href{https://github.com/s9gf4ult/quickcheck-assertions}{github.com/s9gf4ult/quickcheck-assertions}
-    which is
-    \href{http://hackage.haskell.org/package/quickcheck-assertions}{available}
-    on Hackage.
-  \end{itemize}}
+  Developing Python program for tracking stock market operations.  I developed
+  this program for myself because there was no good Open Source trader log
+  program.\newline{}Here is the repository:
+  \href{https://github.com/s9gf4ult/track-deal}{github.com/s9gf4ult/track-deal}}
+
+\cventry {2013}{Haskell-Decimal}{Haskell}{}{}{%
+  \href{https://github.com/PaulJohnson/Haskell-Decimal}{github.com/PaulJohnson/Haskell-Decimal}
+  improved testing, found and fixed multiplication bug, added instances to make
+  posible to input literal Decimals.}
+
+\cventry {2013}{Persistent}{Haskell}{}{}{%
+    \href{https://github.com/yesodweb/persistent}{github.com/yesodweb/persistent}:
+    there is no actually usable changes, just some instances to support new
+    types in persistent fields.}
+    
+\cventry {2013}{Convertible}{Haskell}{}{}{%
+  \href{https://github.com/hdbc/convertible}{github.com/hdbc/convertible}: added
+  the Decimal instances, performed common code cleaning with tests
+  improving. Patches is not accepted yet.\newline{}Here is my repository fork:
+  \href{https://github.com/s9gf4ult/convertible}{github.com/s9gf4ult/convertible}}
+    
+\cventry {2013 (currently working on)}{HDBC}{Haskell}{}{}{%
+  Developing new \href{https://github.com/hdbc/hdbc}{github.com/hdbc/hdbc}:
+  reduced \textbf{SqlValue} constructors to minimal set, added
+  \textbf{Connection} and \textbf{Statement} typeclasses with type families to
+  make HDBC as flexible as posible. Patches are not accepted yet.\newline{}Here
+  is my fork: \href{https://github.com/s9gf4ult/hdbc}{github.com/s9gf4ult/hdbc}}
+    
+    
+\cventry {2013 (currently working on)}{HDBC-postgresql}{Haskell}{}{}{%
+  Develping the driver for HDBC
+  \href{https://github.com/hdbc/hdbc-postgresql}{github.com/hdbc/hdbc-postgresql}:
+  Driver now uses postgresql-libpq to talk with database. No dirty C hacks and
+  direct unsafe FFI calling any more. Driver now takes just 522 (for now) lines
+  of code. Tests are not ready for now and there is some problems.\newline{}Here
+  is my fork:
+  \href{https://github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}{s9gf4ult/hdbc-postgresql/tree/newsqlvalue}}
+    
+\cventry {2013}{quickcheck-assertions}{Haskell}{}{}{%
+  Create package for property-based testing with
+  \href{https://github.com/nick8325/quickcheck}{QuickCheck}.
+  \href{https://github.com/s9gf4ult/quickcheck-assertions}{github.com/s9gf4ult/quickcheck-assertions}
+  allows user to use pretty-printing assertions for more readable test
+  results. It is
+  \href{http://hackage.haskell.org/package/quickcheck-assertions}{available} on
+  Hackage.}
+
 \section{Languages}
 \cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
 \cvitemwithcomment{Russian}{Native}{}
@@ -120,11 +131,31 @@
 \section{Computer skills}
 \cvitem{Linux}{%
   Experienced Linux user, using Linux for serveral years (gentoo).}
+\cvitem{Databases}{%
+  \begin{itemize}
+  \item Solid SQL skills
+  \item Good knowledge of low-level C libraries (especially
+    PostgreSQL-libpq and SQLite)
+  \end{itemize}}
 \cvitem{Python}{%
-  Solid Python skills. PyGtk and Django is what I worked with.}
+  Solid Python skills. Good knowledge of PyGtk and Django}
+\cvitem{Ruby}{%
+  Good skills with Ruby on Rails and and Ruby infrastructure}
+\cvitem{Haskell}{%
+  Solid Haskell skills:%
+  \begin{itemize}
+  \item Advanced type-level programming (GADTs, TypeFamilies). While hacking
+    Persistent and HDBC
+  \item Property-based testing. I am a little paranoid, that's why I choose
+    Haskell
+  \item Monadic parser combinators (parsec)
+  \item Streaming data processing (Conduits)
+  \item Resource management (ResourceT)
+  \item Foreign Function Interface
+  \end{itemize}}
 
-\section{Interests}
-\cvitem{Haskell}{Programming}
+%% \section{Interests}
+%% \cvitem{Haskell}{Programming}
 
 %% \section{Extra 1}
 %% \cvlistitem{Item 1}
