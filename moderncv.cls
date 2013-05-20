@@ -233,6 +233,9 @@
 \collectionnew{phones}
 \newcommand*{\phone}[2][fixed]{\collectionadd[#1]{phones}{#2}}
 \newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\jabber}[1]{\def\@jabber{#1}}
+\newcommand*{\age}[1]{\def\@age{#1}}
+\newcommand*{\social}[1]{\def\@social{#1}}
 % defines one's home page (optional)
 % usage: \homepage{<url>}
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}

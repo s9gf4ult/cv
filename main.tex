@@ -16,6 +16,7 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{fullpage}
 %% \usepackage{hyperref}
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
@@ -28,10 +29,13 @@
 \name{Aleksey}{Uymanov}
 %% \title{Resum`e}                               % optional, remove / comment the line if not wanted
 \address{}{Tyumen}{Russian Federation}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-%% \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
+\phone[mobile]{DONT FORGET TO FIX}                   % optional, remove / comment the line if not wanted
 %% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
+\jabber{segfault@jabber.ru}
+%% \age{26}
+%% \social{Single}
 %% \extrainfo{Jabber: segfault@jabber.ru}
 %% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %% \extrainfo{Social status: single}
@@ -44,6 +48,8 @@
 %\makeatother
 %\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
+\newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
+
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
@@ -55,6 +61,10 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Personal}
+\cvitem{Age}{26}
+\cvitem{Social Status}{Single}
+
 \section{Education}
 \cventry{2007--2009}{Master}{Tyumen Oil and Gas
   Institute}{Tyumen}{\textit{5/5}}{Department of Applied Mechanics}
@@ -65,15 +75,11 @@
 \section{Experience}
 \subsection{Vocational}
 
-\cventry{2013 (current employment)}{Embedded system
+\cventry{2013 (current)}{Embedded system
   programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma
   cutting machine}
 
-\cventry{2012--2013}{Web programmer}{Iris Integration}{Tyumen}{}{Developing web sites:%
-  \begin{itemize}%
-  \item Ruby on Rails project developer \href{http://qrgolos.ru}{qrgolos.ru}
-  \item PHP with Mediawiki project developer \href{http://qrgorod.com}{qrgorod.com}
-  \end{itemize}}
+\cventry{2012--2013}{Web programmer}{Iris Integration}{Tyumen}{}{Developing web sites on PHP, Python, Ruby}
 
 \cventry{2009--2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{}
 
@@ -85,51 +91,35 @@
 \subsection{Projects}
     
 \cventry {2013 (currently working on)}{HDBC-postgresql}{Haskell}{}{}{%
-  Develping the driver for HDBC
-  \href{https://github.com/hdbc/hdbc-postgresql}{github.com/hdbc/hdbc-postgresql}:
-  Driver now uses postgresql-libpq to talk with database. No dirty C hacks and
-  direct unsafe FFI calls any more. Driver now takes just 522 (for now) lines of
-  code. Tests are not ready for now and there is some problems.\newline{}Here is
-  my fork:
-  \href{https://github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}{github.com/s9gf4ult/hdbc-postgresql/tree/newsqlvalue}}
+  \hlink{https://github.com/s9gf4ult/hdbc-postgresql}. The fork of original HDBC
+  driver to work with new HDBC.}
 
 \cventry {2013 (currently working on)}{HDBC}{Haskell}{}{}{%
-  Developing new \href{https://github.com/hdbc/hdbc}{github.com/hdbc/hdbc}.
-  Reduced \textbf{SqlValue} constructors to minimal set, added
-  \textbf{Connection} and \textbf{Statement} typeclasses with type families to
-  make HDBC as flexible as posible. Patches are not accepted yet.\newline{}Here
-  is my fork: \href{https://github.com/s9gf4ult/hdbc}{github.com/s9gf4ult/hdbc}}
+  \hlink{https://github.com/s9gf4ult/hdbc}. Developing new flexible HDBC with
+  some set of features.}
     
 \cventry {2013}{quickcheck-assertions}{Haskell}{}{}{%
-  Create package for property-based testing with
-  \href{https://github.com/nick8325/quickcheck}{QuickCheck}.
-  \href{https://github.com/s9gf4ult/quickcheck-assertions}{github.com/s9gf4ult/quickcheck-assertions}
-  allows user to use pretty-printing assertions for more readable test
-  results. It is
-  \href{http://hackage.haskell.org/package/quickcheck-assertions}{available} on
-  Hackage.}
+  \hlink{https://github.com/s9gf4ult/quickcheck-assertions}. Package for
+  property-based testing with pretty-printed test results.}
     
 \cventry {2013}{Convertible}{Haskell}{}{}{%
-  \href{https://github.com/hdbc/convertible}{github.com/hdbc/convertible}: added
-  the Decimal instances, performed common code cleaning with tests
-  improving. Patches is not accepted yet.\newline{}Here is my fork:
-  \href{https://github.com/s9gf4ult/convertible}{github.com/s9gf4ult/convertible}}
+  \hlink{https://github.com/s9gf4ult/convertible}. Fork of the original
+  Convertible, patches are not accepted for now.}
 
 \cventry {2013}{Haskell-Decimal}{Haskell}{}{}{%
-  \href{https://github.com/PaulJohnson/Haskell-Decimal}{github.com/PaulJohnson/Haskell-Decimal}
-  improved testing, found and fixed multiplication bug, added instances to make
-  posible to input literal Decimals.}
+  \hlink{https://github.com/PaulJohnson/Haskell-Decimal}: contributed. Improved
+  testing, found and fixed multiplication bug, added instances to make posible
+  to input literal Decimals.}
 
 \cventry {2013}{Persistent}{Haskell}{}{}{%
-    \href{https://github.com/yesodweb/persistent}{github.com/yesodweb/persistent}:
-    there is no actually usable changes, just some instances to support new
-    types in persistent fields.}
+  \hlink{https://github.com/yesodweb/persistent}: there is no actually usable
+  changes, just some instances to support new types in persistent fields.}
     
 \cventry{2011--2012}{Track Deal}{Python}{}{}{%
-  Developed Python program for tracking stock market operations.  I created
+  Developing Python program for tracking stock market operations.  I created
   this program for myself because there was no good Open Source trader log
   program.\newline{}Here is the repository:
-  \href{https://github.com/s9gf4ult/track-deal}{github.com/s9gf4ult/track-deal}}
+  \hlink{https://github.com/s9gf4ult/track-deal}}
 
 \section{Computer skills}
 \cvitem{Linux}{%
@@ -138,13 +128,12 @@
   \item Virtualisation (kvm, vbox)
   \item Networking (iptables, routing, traffic shaping)
   \item Control Groups (resource limitations by process)
-  \item Kernel configuration and building
   \item Data storage (LVM, RAID, iSCSI)
   \end{itemize}}
 \cvitem{Databases}{%
   \begin{itemize}
   \item Solid SQL skills
-  \item Good knowledge of low-level C libraries (especially
+  \item Good knowledge of low-level C interface (especially
     PostgreSQL-libpq and SQLite)
   \end{itemize}}%
 \cvitem{Python}{%
@@ -161,78 +150,14 @@
   \item Monadic parser combinators (parsec)
   \item Streaming data processing (Conduits)
   \item Resource management (ResourceT)
-  \item Foreign Function Interface
+  \item FFI
   \end{itemize}}
 
 \section{Languages}
 \cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
 \cvitemwithcomment{Russian}{Native}{}
 
-\section{Personal}
-\cvitem{Age}{26}
-\cvitem{Social Status}{Single}
-
-
-%% \section{Interests}
-%% \cvitem{Haskell}{Programming}
-
-%% \section{Extra 1}
-%% \cvlistitem{Item 1}
-%% \cvlistitem{Item 2}
-%% \cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-%% \section{Extra 2}
-%% \cvlistdoubleitem{Item 1}{Item 4}
-%% \cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-%% \cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-%% \section{References}
-%% \begin{cvcolumns}
-%%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-%%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-%%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-%% \end{cvcolumns}
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%% \clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-%% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-%% \date{January 01, 1984}
-%% \opening{Dear Sir or Madam,}
-%% \closing{Yours faithfully,}
-%% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-%% \makelettertitle
-
-%% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-%% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-%% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-%% Albert Einstein discovered that $e=mc^2$ in 1905.
-
-%% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-%% \makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
-
-%% end of file `template.tex'.
