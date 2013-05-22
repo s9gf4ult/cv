@@ -397,8 +397,8 @@
 % usage: \httplink[optional text]{link}
 \newcommand*{\httplink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
-    {\href{http://#2}{#2}}%
-    {\href{http://#2}{#1}}}
+    {\href{#2}{#2}}%
+    {\href{#2}{#1}}}
 
 % makes an email hyperlink
 % usage: \emaillink[optional text]{link}
