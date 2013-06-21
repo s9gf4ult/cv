@@ -8,163 +8,130 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-% moderncv themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-\usepackage{fullpage}
-%% \usepackage{hyperref}
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage{polyglossia}   %% загружает пакет многоязыковой вёрстки
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amssymb}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+
+\setdefaultlanguage[spelling=modern]{russian}  %% устанавливает главный язык документа
+\setotherlanguage{english} %% объявляет второй язык документа
+
+\newfontfamily\cyrillicfonttt{DejaVu Sans}
+\newfontfamily\cyrillicfont{DejaVu Sans}
+
+
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-% personal data
-\name{Aleksey}{Uymanov}
-%% \title{Resum`e}                               % optional, remove / comment the line if not wanted
-\address{}{Tyumen}{Russian Federation}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\name{Алексей}{Уйманов}
+\address{Россия}{Тюмень}{}
 \phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
-%% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-%% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
 \jabber{segfault@jabber.ru}
-%% \age{26}
-%% \social{Single}
-%% \extrainfo{Jabber: segfault@jabber.ru}
-\homepage{http://www.haskellers.com/user/AlekseyUymanov}
-%% \extrainfo{Social status: single}
-%% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\homepage{https://github.com/s9gf4ult}
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Personal}
-\cvitem{Age}{26}
-\cvitem{Social Status}{Single}
+\section{Общее}
+\cvitem{Возраст}{27}
+\cvitem{Семейное положение}{Холост}
 
-\section{Education}
-\cventry{2007--2009}{Master}{Tyumen Oil and Gas
-  Institute}{Tyumen}{\textit{4.8/5}}{Department of Applied Mechanics}
+\section{Образование}
+\cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра прикладной механики}
 
-\cventry{2003--2007}{Bachelor}{Tyumen Oil and Gas
-  Institute}{Tyumen}{\textit{4.7/5}}{Department of Applied Mechanics}
+\cventry{2003 -- 2007}{Бакалавр}{ТюмГНГУ}{Тюмень}{\textit{4.7/5}}{Кафедра прикладной механики}
 
-\section{Experience}
-\subsection{Vocational}
+\section{Опыт работы}
+\subsection{Профессиональный}
 
-\cventry{2013 (current)}{Embedded system
-  programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma
-  cutting machine}
+\cventry{2013 (текущее место работы)}{Программист}{CyberStep}{Тюмень}{}
+        {Разработка программного обеспечения для станков плазменной резки.}
 
-\cventry{2012--2013}{Web programmer}{Iris Integration}{Tyumen}{}{Developing web
-  sites on PHP, Python, Ruby:%
+\cventry{2012 -- 2013}{Веб програмист}{Ирис Интеграция}{Тюмень}{}{%
+  Разработка сайтов на PHP, Ruby on Rails, Python + Django
   \begin{itemize}
-  \item \hlink{http://qrgorod.com}: project on PHP and Mediawiki
-  \item \hlink{http://qrgolos.com}: project on Ruby on Rails
+  \item \hlink{http://qrgorod.com}: Разработка архитектуры и программирование, верстка \hbox{(PHP + Mediawiki)}
+  \item \hlink{http://qrgolos.com}: Программирование бэкэнда на Ruby on Rails
   \end{itemize}}
 
-\cventry{2009--2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{}
+\cventry{2009 -- 2012}{Системный администратор}{ГАУ ТО Миац}{Тюмень}{}{%
+  Поддержка систем хранения, виртуальных машин.}
 
-\cventry{2007--2009}{Design Engineer}{Jsc Sibneftemash}{Tyumen}{}{Calculation of
-  the design of process tanks}
+\cventry{2007 -- 2009}{Инженер конструктор}{ОАО Сибнефтемаш}{Тюмень}{}{%
+  Прочностной расчет технологических емкостей, конструкций}
 
-\cventry{2006--2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
+\cventry{2006 -- 2007}{Системный администратор}{МУПГТ Тюменьгортранс}{Тюмень}{}{Эникейщик}
 
-\subsection{Projects}
-\cventry {2013 (currently working
-  on)}{Haskell}{HDBC-postgresql}{\hlink{https://github.com/s9gf4ult/hdbc-postgresql}}{}{%
-  The fork of original HDBC driver to work with new HDBC.}
-
-\cventry {2013 (currently working
-  on)}{Haskell}{HDBC}{\hlink{https://github.com/s9gf4ult/hdbc}}{}{Developing
-  new flexible HDBC with some set of features.}
+\subsection{Мои проекты}
+\cventry {2013}{Haskell}{HDBC}{\hlink{https://github.com/s9gf4ult/hdbc}}{}{%
+  Форк оригинального HDBC -- обобщенного интерфейса для работы с базами данных.}
     
-\cventry
-    {2013}{Haskell}{quickcheck-assertions}%
+\cventry {2013}{Haskell}{HDBC-postgresql}{\hlink{https://github.com/s9gf4ult/hdbc-postgresql}}{}{%
+  Драйвер, реализующий работу с PostgreSQL. Сделан для выше указанного HDBC}
+
+\cventry {2013}{Haskell}{quickcheck-assertions}%
     {\hlink{https://github.com/s9gf4ult/quickcheck-assertions}}{}{%
-      Package for property-based testing with pretty-printed test results.}
-    
-\cventry{2013}{Haskell}{Convertible}%
-        {\hlink{https://github.com/s9gf4ult/convertible}}{}{%
-          Fork of the original Convertible, patches are not accepted for now.}
-
-\cventry{2013}{Haskell}{Haskell-Decimal}%
-        {\hlink{https://github.com/PaulJohnson/Haskell-Decimal}}{}{%
-          Improved testing, found and fixed multiplication bug, added instances
-          to make posible to input literal Decimals.}
-
-\cventry{2013}{Haskell}{Persistent}%
-        {\hlink{https://github.com/yesodweb/persistent}}{}{%
-          There is no actually usable changes, just some instances to support
-          new types in persistent fields.}
+      Дополнительный пакет для QuickCheck -- пакета для проверки свойств программы, тестирования.}
     
 \cventry{2011--2012}{Python}{Track Deal}%
         {\hlink{https://github.com/s9gf4ult/track-deal}}{}{%
-          Developing Python program for tracking stock market operations.  I
-          created this program for myself because there was no good Open Source
-          trader log program.}
+          Утилита для ведения журнала трейдера.}
 
-\section{Computer skills}
+\cvitem{Прочее}{Участие в различных OpenSource проектах, отправка патчей с
+  исправлением ошибок}
+
+\section{Компьютерные умения}
 \cvitem{Linux}{%
-  Experienced Linux user and administrator (Linux is my main home and work operating system):
+  Опытный пользователь и администратор Linux.
+  На домашнем компьютере Gentoo вместо Windows.
   \begin{itemize}
-  \item Virtualisation (kvm, libvirt)
-  \item Networking (iptables, routing, traffic shaping)
-  \item Data storage (LVM, RAID, iSCSI)
+  \item Виртуализация (kvm, libvirt)
+  \item Сети (фильтрация, маршрутизация, шейпинг)
+  \item Хранение данных (LVM, RAID, iSCSI)
+  \item Настройка параметров ядра, оптимизация сервера.
   \end{itemize}}
-\cvitem{Databases}{%
+\cvitem{Базы данных}{%
   \begin{itemize}
-  \item Solid SQL skills
-  \item Good knowledge of low-level C interface (especially
-    PostgreSQL-libpq and SQLite)
-  \item NoSql skills (MongoDB, Memcached, Redis)
-  \end{itemize}}%
-\cvitem{Python}{%
-  Solid Python skills. Good knowledge of PyGtk and Django}
-\cvitem{Ruby}{%
-  Good skills with Ruby on Rails and and Ruby infrastructure}
-\cvitem{Haskell}{%
-  Solid Haskell skills:%
-  \begin{itemize}
-  \item Advanced type-level programming (GADTs, TypeFamilies). While hacking
-    Persistent and HDBC
-  \item Property-based testing. I am a little paranoid, that's why I choose
-    Haskell
-  \item Monadic parser combinators (parsec)
-  \item Streaming data processing (Conduits)
-  \item Resource management (ResourceT)
-  \item Monadic EDSLs
-  \item FFI
+  \item Уверенное знание SQL
+  \item Опыт работы с PostgreSQL, MySql, Sqlite, Oracle
+  \item Опыт работы с NoSql базами данных (MongoDB, memcached)
   \end{itemize}}
-\cvitem{DVCS}{%
-  Fanatic Git user.}
+\cvitem{Программирование}{%
+  \begin{itemize}
+  \item HTML/CSS -- верстка, большой опыт
+  \item Python -- большой опыт, написание скриптов автоматизации, PyGtk, Django
+  \item Ruby -- Ruby on Rails, опыт разработки двух проектов
+  \item C++ -- не большой опыт, но знаю, как на нем писать не надо
+  \item PHP -- разработка плагинов и скинов для Mediawiki, уверенно знаю
+  \item Tcl/Tk
+  \item Haskell -- мой любимый язык, опыт постоянно растет
+  \end{itemize}}
+\cvitem{Прочее}{%
+  \begin{itemize}
+  \item Конфигурирование Apache
+  \item nginx -- конфигурирование и правильное применение
+  \item varnish -- ускорение сайта с помощью кэширования страниц
+  \item Git -- фанатичный пользователь, отлично знаю
+  \item \LaTeX{}
+  \item Emacs
+  \item Unix окружение -- командная строка и прочий хардкор.
+  \end{itemize}}
 
-\section{Languages}
-\cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
-\cvitemwithcomment{Russian}{Native}{}
+
+\section{Иностранные языки}
+\cvitemwithcomment{Английский}{}{Свободное чтение документации и электронная переписка}
 
 \nocite{*}
 \bibliographystyle{plain}
