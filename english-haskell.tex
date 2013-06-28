@@ -21,48 +21,30 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.76]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Aleksey}{Uymanov}
-%% \title{Resum`e}                               % optional, remove / comment the line if not wanted
 \address{}{Tyumen}{Russian Federation}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
-%% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-%% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
 \jabber{segfault@jabber.ru}
-%% \age{26}
-%% \social{Single}
-%% \extrainfo{Jabber: segfault@jabber.ru}
 \homepage{http://www.haskellers.com/user/AlekseyUymanov}
-%% \extrainfo{Social status: single}
-%% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
+\title{A Haskeller}
+%% \quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Personal}
-\cvitem{Age}{26}
+\cvitem{Age}{27}
 \cvitem{Social Status}{Single}
 
 \section{Education}
@@ -94,26 +76,25 @@
 \cventry{2006--2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
 
 \subsection{Projects}
-\cventry {2013 (currently working
-  on)}{Haskell}{HDBC-postgresql}{\hlink{https://github.com/s9gf4ult/hdbc-postgresql}}{}{%
-  The fork of original HDBC driver to work with new HDBC.}
 
-\cventry {2013 (currently working
-  on)}{Haskell}{HDBC}{\hlink{https://github.com/s9gf4ult/hdbc}}{}{Developing
-  new flexible HDBC with some set of features.}
-    
+\cventry {2013 (currently working on)}{Haskell}{HDBC}{\hlink{https://github.com/s9gf4ult/hdbc}}{}
+         {Developing new flexible HDBC with some set of features and fixed architecture issues.}
+
+\cventry {2013 (currently working on)}{Haskell}{HDBC-postgresql}{\hlink{https://github.com/s9gf4ult/hdbc-postgresql}}{}
+         {The fork of original HDBC driver to work with new HDBC.}
+
 \cventry
     {2013}{Haskell}{quickcheck-assertions}%
     {\hlink{https://github.com/s9gf4ult/quickcheck-assertions}}{}{%
-      Package for property-based testing with pretty-printed test results.}
+      Package for property-based testing providing pretty-printed test results.}
     
-\cventry{2013}{Haskell}{Convertible}%
-        {\hlink{https://github.com/s9gf4ult/convertible}}{}{%
-          Fork of the original Convertible, patches are not accepted for now.}
+\cventry{2013}{Haskell}{Convertible}
+        {\hlink{https://github.com/s9gf4ult/convertible}}{}
+        {Fork of the original Convertible, patches are not accepted for now.}
 
-\cventry{2013}{Haskell}{Haskell-Decimal}%
-        {\hlink{https://github.com/PaulJohnson/Haskell-Decimal}}{}{%
-          Improved testing, found and fixed multiplication bug, added instances
+\cventry{2013}{Haskell}{Haskell-Decimal}
+        {\hlink{https://github.com/PaulJohnson/Haskell-Decimal}}{}
+        {Improved testing, found and fixed multiplication bug, added instances
           to make posible to input literal Decimals.}
 
 \cventry{2013}{Haskell}{Persistent}%
@@ -122,14 +103,25 @@
           new types in persistent fields.}
     
 \cventry{2011--2012}{Python}{Track Deal}%
-        {\hlink{https://github.com/s9gf4ult/track-deal}}{}{%
-          Developing Python program for tracking stock market operations.  I
-          created this program for myself because there was no good Open Source
-          trader log program.}
+        {\hlink{https://github.com/s9gf4ult/track-deal}}{}
+        {Python program for tracking stock market operations. It is created for
+          myself because there was no good Open Source trader log program.}
 
 \section{Computer skills}
+\cvitem{Haskell}{%
+  Solid Haskell skills:%
+  \begin{itemize}
+  \item Advanced type-level programming (GADTs, TypeFamilies). While hacking
+    Persistent and HDBC
+  \item Property-based testing with QuickCheck.
+  \item Monadic parser combinators (parsec, attoparsec)
+  \item Streaming data processing (Conduits)
+  \item Resource management (ResourceT)
+  \item Monadic EDSLs
+  \item FFI
+  \end{itemize}}
 \cvitem{Linux}{%
-  Experienced Linux user and administrator (Linux is my main home and work operating system):
+  Experienced Linux user and administrator (Linux is my main home and work OS):
   \begin{itemize}
   \item Virtualisation (kvm, libvirt)
   \item Networking (iptables, routing, traffic shaping)
@@ -146,27 +138,16 @@
   Solid Python skills. Good knowledge of PyGtk and Django}
 \cvitem{Ruby}{%
   Good skills with Ruby on Rails and and Ruby infrastructure}
-\cvitem{Haskell}{%
-  Solid Haskell skills:%
+\cvitem{Others}{%
   \begin{itemize}
-  \item Advanced type-level programming (GADTs, TypeFamilies). While hacking
-    Persistent and HDBC
-  \item Property-based testing. I am a little paranoid, that's why I choose
-    Haskell
-  \item Monadic parser combinators (parsec)
-  \item Streaming data processing (Conduits)
-  \item Resource management (ResourceT)
-  \item Monadic EDSLs
-  \item FFI
+  \item Git, SVN, Hg
+  \item Emacs
+  \item \LaTeX
   \end{itemize}}
-\cvitem{DVCS}{%
-  Fanatic Git user.}
 
 \section{Languages}
-\cvitemwithcomment{English}{Intermediate}{Good technical reading and writing}
+\cvitemwithcomment{English}{Beginner}{Good reading and writing, low verbal skills}
 \cvitemwithcomment{Russian}{Native}{}
 
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 \end{document}
