@@ -1,0 +1,149 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\usepackage{polyglossia}   %% загружает пакет многоязыковой вёрстки
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amssymb}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+
+\setdefaultlanguage[spelling=modern]{russian}  %% устанавливает главный язык документа
+\setotherlanguage{english} %% объявляет второй язык документа
+
+\newfontfamily\cyrillicfonttt{Liberation Sans}
+\newfontfamily\cyrillicfont{Liberation Sans}
+
+
+
+% adjust the page margins
+\usepackage[scale=0.77]{geometry}
+
+\name{Алексей}{Уйманов}
+\address{Россия}{Тюмень}{}
+\phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
+\email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
+\jabber{segfault@jabber.ru}
+\homepage{https://github.com/s9gf4ult}
+%% \quote{Решатель проблем}
+
+\newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
+
+
+\begin{document}
+\makecvtitle
+
+\section{Общее}
+\cvitem{Возраст}{27}
+\cvitem{Семейное положение}{Холост}
+
+\section{Образование}
+\cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра прикладной механики}
+
+\cventry{2003 -- 2007}{Бакалавр}{ТюмГНГУ}{Тюмень}{\textit{4.7/5}}{Кафедра прикладной механики}
+
+\section{Опыт работы}
+\subsection{Профессиональный}
+
+\cventry{2013 (текущее место работы)}{Программист}{CyberStep}{Тюмень}{}
+        {Разработка встраиваемого программного обеспечения для станков плазменной резки.}
+
+\cventry{2012 -- 2013}{Веб програмист}{Ирис Интеграция}{Тюмень}{}{%
+  Разработка сайтов на PHP, Ruby on Rails, Python + Django
+  \begin{itemize}
+  \item \hlink{http://qrgorod.com}: Разработка архитектуры и программирование, верстка \hbox{(PHP + Mediawiki)}
+  \item \hlink{http://qrgolos.com}: Программирование бэкэнда на Ruby on Rails
+  \end{itemize}}
+
+\cventry{2009 -- 2012}{Системный администратор}{ГАУ ТО Миац}{Тюмень}{}{%
+  Поддержка систем хранения, виртуальных машин.}
+
+\cventry{2007 -- 2009}{Инженер конструктор}{ОАО Сибнефтемаш}{Тюмень}{}{%
+  Прочностной расчет технологических емкостей, конструкций}
+
+\cventry{2006 -- 2007}{Системный администратор}{МУПГТ Тюменьгортранс}{Тюмень}{}{}
+
+\subsection{Мои проекты}
+\cventry {2013}{Haskell}{HDBI}{\hlink{https://github.com/s9gf4ult/hdbi}}{}{%
+  Форк оригинального HDBC -- обобщенного интерфейса для работы с базами данных.}
+    
+\cventry {2013}{Haskell}{HDBI-postgresql}{\hlink{https://github.com/s9gf4ult/hdbi-postgresql}}{}{%
+  Драйвер, реализующий работу с PostgreSQL. Сделан для выше указанного HDBI.}
+
+\cventry {2013}{Haskell}{HDBI-sqlite}{\hlink{https://github.com/s9gf4ult/hdbi-sqlite}}{}{%
+  Драйвер, реализующий работу с Sqlite при помощи HDBI.}
+
+\cventry {2013}{Haskell}{quickcheck-assertions}%
+    {\hlink{https://github.com/s9gf4ult/quickcheck-assertions}}{}{%
+      Дополнительный пакет для QuickCheck -- пакета для проверки свойств программы и тестирования.}
+    
+\cventry{2011--2012}{Python}{Track Deal}%
+        {\hlink{https://github.com/s9gf4ult/track-deal}}{}{%
+          Утилита для ведения журнала трейдера.}
+
+\cvitem{Прочее}{Участие в различных OpenSource проектах, отправка патчей с
+  исправлением ошибок}
+
+\section{Умения}
+  
+\cvitem{Программирование}{%
+  \begin{itemize}
+  \item Web:
+    \begin{itemize}
+    \item Ruby: опыт разрабтки двух приложений на Ruby on Rails (Rspec, Factory girl, Faye, Devise)
+    \item HTTP: понимание принципов протокола
+    \item HTML/CSS: опыт верстки около года
+    \item Python: PyGtk, Django
+    \item JavaScript: JQuery, AngularJS
+    \item PHP: опыт работы с движком Mediawiki около года
+    \end{itemize}
+  \item C: опыт пол года.
+  \item Sql: PostgreSQL, MySql, Sqlite, Oracle
+  \item Git, SVN, Hg
+  \item Haskell: GADTs, TypeFamilies, QuickCheck
+  \item NoSql: MongoDB, memcached
+  \end{itemize}}
+
+\cvitem{Администрирование}{%
+  \begin{itemize}
+  \item Linux: Опытный пользователь и администратор Linux.  На домашнем
+    компьютере Linux более \hbox{4 лет}
+  \item Apache, nginx: конфигурирование и установка модулей
+  \item Varnish: написание скрптов кеширования на VCL
+  \item Squid: конфигурирование
+  \item Хранение: LVM, RAID, iSCSI
+  \item Сеть: iptables, ip, tc
+  \item Виртуализация: libvirt, kvm
+  \end{itemize}}
+
+\cvitem{Прочее}{%
+  \begin{itemize}
+  \item \LaTeX
+  \item Emacs
+  \end{itemize}}
+  
+
+\section{Иностранные языки}
+\cvitemwithcomment{Английский}{}{Свободное чтение документации и электронная переписка}
+
+%% \section{О себе}
+%% Считаю корректность, правильность и протестированность кода важнее скорости его
+%% работы, всегда стараюсь придерживаться TDD. Из систем контроля версий
+%% предпочитаю Git. Из языков программирования предпочитаю Haskell.
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+\end{document}
