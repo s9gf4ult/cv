@@ -21,13 +21,13 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.76]{geometry}
+\usepackage[scale=0.79]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Aleksey}{Uymanov}
-\address{}{Tyumen}{Russian Federation}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{Russian Federation}{Tyumen}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
 \email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
 \jabber{segfault@jabber.ru}
@@ -91,6 +91,10 @@
     {2013}{Haskell}{HDBI-sqlite}{\hlink{https://github.com/s9gf4ult/hdbi-sqlite}}{}
     {SQlite3 driver for HDBI.}
 
+\cventry    
+    {2013}{Haskell}{HDBI-conduit}{\hlink{https://github.com/s9gf4ult/hdbi-conduit}}{}
+    {Conduit streamers for HDBI}
+
 \cventry
     {2013}{Haskell}{quickcheck-assertions}%
     {\hlink{https://github.com/s9gf4ult/quickcheck-assertions}}{}{%
@@ -114,17 +118,15 @@
     \begin{itemize}
     \item Advanced type-level programming (GADTs, TypeFamilies)
     \item Property-based testing with QuickCheck
+    \item FFI
     \item Parser combinators (parsec, attoparsec)
-    \item Conduits, ResourceT
-    \item Space leaks searching, optimization.
+    \item Data streaming (Conduits + ResourceT)
+    \item Space leaks fixing, optimization.
     \end{itemize}
   \item Web:
     \begin{itemize}
-    %% \item Ruby: опыт разрабтки двух приложений на Ruby on Rails (Rspec, Factory girl, Faye, Devise)
-    \item HTTP: understanding protocol principles
-    \item HTML/CSS: about a year coding experience
+    \item HTTP, HTML/CSS: about a year coding experience
     \item JavaScript: JQuery, AngularJS
-    %% \item PHP: опыт работы с движком Mediawiki около года
     \end{itemize}
   \item Python: PyGtk, Django
   \item C: coding half a yeah
@@ -149,47 +151,6 @@
   \item Emacs
   \end{itemize}}
 
-
-
-
-
-
-%% \cvitem{Haskell}{%
-%%   Solid Haskell skills:%
-%%   \begin{itemize}
-%%   \item Advanced type-level programming (GADTs, TypeFamilies). While hacking
-%%     Persistent and HDBC
-%%   \item Property-based testing with QuickCheck.
-%%   \item Monadic parser combinators (parsec, attoparsec)
-%%   \item Streaming data processing (Conduits)
-%%   \item Resource management (ResourceT)
-%%   \item Monadic EDSLs
-%%   \item FFI
-%%   \end{itemize}}
-%% \cvitem{Linux}{%
-%%   Experienced Linux user and administrator (Linux is my main home and work OS):
-%%   \begin{itemize}
-%%   \item Virtualisation (kvm, libvirt)
-%%   \item Networking (iptables, routing, traffic shaping)
-%%   \item Data storage (LVM, RAID, iSCSI)
-%%   \end{itemize}}
-%% \cvitem{Databases}{%
-%%   \begin{itemize}
-%%   \item Solid SQL skills
-%%   \item Good knowledge of low-level C interface (especially
-%%     PostgreSQL-libpq and SQLite)
-%%   \item NoSql skills (MongoDB, Memcached, Redis)
-%%   \end{itemize}}%
-%% \cvitem{Python}{%
-%%   Solid Python skills. Good knowledge of PyGtk and Django}
-%% \cvitem{Ruby}{%
-%%   Good skills with Ruby on Rails and and Ruby infrastructure}
-%% \cvitem{Others}{%
-%%   \begin{itemize}
-%%   \item Git, SVN, Hg
-%%   \item Emacs
-%%   \item \LaTeX
-%%   \end{itemize}}
 
 \section{Languages}
 \cvitemwithcomment{English}{Beginner}{Good reading and writing, low verbal skills}
