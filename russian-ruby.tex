@@ -45,10 +45,6 @@
 \begin{document}
 \makecvtitle
 
-\section{Общее}
-\cvitem{Возраст}{27}
-\cvitem{Семейное положение}{Холост}
-
 \section{Образование}
 \cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра прикладной механики}
 
@@ -57,8 +53,12 @@
 \section{Опыт работы}
 \subsection{Профессиональный}
 
+\cventry{2014}{Ruby on Rails программист}{Удаленная работа}{}{}{}{%
+  Имею небольшой опыт удаленной работы.
+}
+
 \cventry{2013 (текущее место работы)}{Программист}{CyberStep}{Тюмень}{}{%
-  Разработка встраиваемого программного обеспечения для станков плазменной резки.
+  Разработка программного обеспечения для станков плазменной резки.
   \medskip
   \begin{itemize}
   \item Форк Fat Free CRM, добавил генератор комерческих предложений для фирмы\\
@@ -110,28 +110,28 @@
   \item Ruby
     \begin{itemize}
     \item Ruby on Rails 3
-    \item Devise
-    \item Rspec, FactoryGirl
-    \item Paperclip
+    \item haml, coffeescript
+    \item rspec, factory\_girl
+    \item paperclip, simple\_form, devise, acts\_as\_commentable
     \end{itemize}
   \item HTML/CSS: небольшой опыт верстки, Blueprint CSS
   \item JavaScript: JQuery, AngularJS
-  \item HTTP: понимание принципов протокола
+  \item HTTP: понимание принципов протокола, REST
   \item Python: PyGtk, Django
   \item PHP: опыт работы с движком Mediawiki около года
   \end{itemize}
-\item C: опыт пол года.
 \item Sql: PostgreSQL, MySql, Sqlite, Oracle
-\item Git, SVN, Hg
-\item Haskell: GADTs, TypeFamilies, QuickCheck
 \item NoSql: MongoDB, memcached
+\item Git, SVN (но лучше Git)
+\item C: опыт пол года.
+\item Haskell: GADTs, TypeFamilies, QuickCheck, Yesod, Conduit
 \end{itemize}
 
 \subsection{Администрирование}
 
 \begin{itemize}
-\item Linux: Опытный пользователь и администратор Linux.  На домашнем
-  компьютере Linux более \hbox{4 лет}
+\item Linux: Опытный пользователь и администратор Linux (на
+  рабочей станции использую Gentoo)
 \item Apache, nginx: конфигурирование и установка модулей
 \item Varnish: написание скрптов кеширования на VCL
 \item Squid: конфигурирование
@@ -148,12 +148,9 @@
 \end{itemize}
 
 \section{Иностранные языки}
-\cvitemwithcomment{Английский}{}{Свободное чтение документации и электронная переписка}
+\cvitemwithcomment{Английский}{}{Свободное чтение
+  документации и электронная переписка}
 
-%% \section{О себе}
-%% Считаю корректность, правильность и протестированность кода важнее скорости его
-%% работы, всегда стараюсь придерживаться TDD. Из систем контроля версий
-%% предпочитаю Git. Из языков программирования предпочитаю Haskell.
 
 \nocite{*}
 \bibliographystyle{plain}
