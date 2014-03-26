@@ -1,0 +1,154 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{fullpage}
+%% \usepackage{hyperref}
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.79]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Aleksey}{Uymanov}
+\address{Russian Federation}{Tyumen}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
+\email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
+\jabber{segfault@jabber.ru}
+\homepage{https://github.com/s9gf4ult}
+%% \title{A Rubyists}
+%% \quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
+
+
+\newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+%% \section{Personal}
+%% \cvitem{Age}{27}
+%% \cvitem{Social Status}{Single}
+
+\section{Education}
+\cventry{2007--2009}{Master}{Tyumen Oil and Gas
+  Institute}{Tyumen}{\textit{4.8/5}}{Department of Applied Mechanics}
+
+\cventry{2003--2007}{Bachelor}{Tyumen Oil and Gas
+  Institute}{Tyumen}{\textit{4.7/5}}{Department of Applied Mechanics}
+
+\section{Experience}
+\subsection{Vocational}
+
+\cventry{2013 (current)}{Embedded system
+  programmer}{CyberStep}{Tyumen}{}{Developing embedded program for plasma
+  cutting machine}
+
+\cventry{2012--2013}{Web developer}{Iris Integration}{Tyumen}{}{Developing web
+  sites on PHP, Python, Ruby:%
+  \begin{itemize}
+  \item \hlink{http://qrgorod.com}: project on PHP and Mediawiki
+  \item \hlink{http://qrgolos.com}: project on Ruby on Rails
+  \end{itemize}}
+
+\cventry{2009--2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{}
+
+\cventry{2007--2009}{Design Engineer}{Jsc Sibneftemash}{Tyumen}{}{Calculation of
+  the design of process tanks}
+
+\cventry{2006--2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
+
+\subsection{Projects}
+
+\cventry
+    {2013}{Haskell}{HDBI}{\hlink{https://github.com/s9gf4ult/hdbi}}{}
+    {Developing new flexible HDBC fork with some set of features and fixed
+      architecture issues. There is also drivers for PostgreSQL and SQlite3}
+
+\cventry
+    {2013}{Haskell}{quickcheck-assertions}%
+    {\hlink{https://github.com/s9gf4ult/quickcheck-assertions}}{}{%
+      Package for property-based testing providing pretty-printed test results.}
+
+\cventry
+    {2011--2012}{Python}{Track Deal}%
+    {\hlink{https://github.com/s9gf4ult/track-deal}}{}
+    {Python program for tracking stock market operations. It is created for
+      myself because there was no good Open Source trader log program.}
+
+\cvitem
+    {Others}{Participation in other open source projects.}
+
+
+\section{Computer skills}
+
+\subsection{Programming}
+
+\begin{itemize}
+\item Web:
+  \begin{itemize}
+  \item Ruby
+    \begin{itemize}
+    \item Ruby on Rails 3
+    \item haml, coffeescript
+    \item rspec, factory\_girl
+    \item paperclip, simple\_form, devise, acts\_as\_commentable
+    \end{itemize}
+  \item HTML/CSS: intermediate typesetting experience, Blueprint CSS
+  \item JavaScript: JQuery, AngularJS
+  \item HTTP, REST
+  \item Python: PyGtk, Django
+  \item PHP: worked with Mediawiki engine
+  \end{itemize}
+\item Sql: PostgreSQL, MySql, Sqlite, Oracle
+\item NoSql: MongoDB, memcached
+\item Git, SVN
+\item C: half year experience
+\item Haskell: GADTs, TypeFamilies, QuickCheck, Yesod, Conduit
+\end{itemize}
+
+\medskip
+
+\subsection{System administration}
+
+\begin{itemize}
+\item Linux: experienced Linux user and administrator for several years.
+\item Apache, nginx
+\item Varnish, Squid
+\item LVM, RAID, iSCSI
+\item iptables, ip, tc
+\item libvirt, kvm
+\end{itemize}
+
+\medskip
+
+\subsection{Others}
+
+\begin{itemize}
+\item \LaTeX
+\item Emacs
+\end{itemize}
+
+\section{Languages}
+\cvitemwithcomment{English}{Beginner}{Good reading and writing, low verbal skills}
+\cvitemwithcomment{Russian}{Native}{}
+
+\nocite{*}
+\end{document}
