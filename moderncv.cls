@@ -234,6 +234,7 @@
 \newcommand*{\phone}[2][fixed]{\collectionadd[#1]{phones}{#2}}
 \newcommand*{\email}[1]{\def\@email{#1}}
 \newcommand*{\jabber}[1]{\def\@jabber{#1}}
+\newcommand*{\skype}[1]{\def\@skype{#1}}
 \newcommand*{\age}[1]{\def\@age{#1}}
 \newcommand*{\social}[1]{\def\@social{#1}}
 % defines one's home page (optional)
@@ -284,7 +285,7 @@
 % usage: \moderncvstyle{<style variant name>}
 \newcommand*{\moderncvstyle}[1]{
   \RequirePackage{moderncvstyle#1}}
-  
+
 % loads a color scheme
 % usage: \moderncvcolor{<color scheme name>}
 \newcommand*{\moderncvcolor}[1]{
