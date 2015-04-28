@@ -42,7 +42,7 @@
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 \newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
-
+\newcommand*{\bb}[1]{\textbf{\hbox{#1}}}
 
 \begin{document}
 \makecvtitle
@@ -51,17 +51,23 @@
 
 \cventry{2014 -- Сейчас}{Haskell программист}{AdTel}{Удаленная работа}{}{}{%
   \begin{itemize}
-  \item Сделал сервис аутентификации по протоколу Oauth2. Сервис в
-    последствии был разбит на два пакета: подключаемый сервер-плагин
-    oauth2-server (Yesod subsite) и непосредственно сервис, к которому
-    подключен oauth2-server.
+  \item Сделал сервис аутентификации по протоколу \bb{Oauth2}. Сервис
+    в последствии был разбит на два пакета: подключаемый сервер-плагин
+    \bb{oauth2-server} (\bb{Yesod} subsite) и непосредственно сервис,
+    к которому подключен \bb{oauth2-server}.
   \item Сделал пакет для удобной (и безопасной) генерации SQL-запросов
     \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. По
-    сути, интерполирующий квазиквотер SQL-запросов с зачатками ORM.
-  \item Переписал пакет OTP с использвоанием cryptohash:
+    сути, интерполирующий квазиквотер SQL-запросов с зачатками
+    ORM. Работает через \bb{postgresql-simple}
+  \item Переписал пакет
+    \nlink{http://hackage.haskell.org/package/OTP}{OTP} с
+    использвоанием \bb{cryptohash}:
     \nlink{http://hackage.haskell.org/package/one-time-password}{one-time-password}
   \item Сделал пакет для удобного доступа к redis соединению:
     \nlink{http://hackage.haskell.org/package/hedis-monadic}{hedis-monadic}
+  \item Автоматизировал сборку и развертывание сервиса аутентификации
+    с использованием
+    \nlink{http://hackage.haskell.org/package/shake}{shake}
   \end{itemize}
 }
 
@@ -109,18 +115,18 @@
 \begin{itemize}
 \item Haskell
   \begin{itemize}
-  \item Template Haskell/QuasiQuoter: могу на Template Haskell
+  \item Template Haskell/QuasiQuoter: могу на \bb{Template Haskell}
     делать всякое. Освоил при написании
     \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}
-  \item Комбинаторные парсеры: могу на parserc/attoparsec делать
-    всякое, в частности, QQ-парсер в \hbox{postgresql-query} написан на
-    \hbox{attoparsec}.
+  \item Комбинаторные парсеры: могу на \bb{parserc/attoparsec} делать
+    всякое, в частности, QQ-парсер в \bb{postgresql-query} написан на
+    \bb{attoparsec}.
   \item Yesod: освоил фреймворк за время работы в AdTel, делал
     пулл-реквесты, знаю внутреннее строение на хорошем уровне.
   \item Scotty: применял для написания сервиса генерации PDF файлов для AdTel.
   \item QuicCheck/SmallCheck: автоматизированное тестирование свойств
     программы
-  \item MonadBaseControl: знаю зачем нужно и могу написать инстанс \includegraphics[height=0.6em]{Trollface_HD}
+  \item MonadBaseControl: знаю зачем нужно и могу написать инстанс \includegraphics[height=1.1ex]{Trollface_HD}
   \item Продвинутая магия типов: GADTs, TypeFamilies, RankNTypes
   \item Имею пакеты на \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{хакадже}
   \end{itemize}
@@ -136,8 +142,12 @@
   \end{itemize}
 \item Ruby
   \begin{itemize}
-  \item Ruby on Rails и разнообразные сопутствующие пакеты
+  \item Ruby on Rails и разнообразные сопутствующие пакеты (paperclip, simple\_form, devise ...)
   \end{itemize}
+\item Низкоуровневые интерфейсы к базам данных: освоил пока писал
+  \nlink{http://hackage.haskell.org/package/hdbi}{hdbi}.
+\item SQL: на нормальном уровне знаю PostgreSQL и Sqlite, менее хорошо
+  знаю MySql
 \item Пишу тесты: unit-тесты, property-тесты, интеграционные.
 \item Git, Subversion
 \item Redmine, Slack
