@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -44,8 +44,38 @@
 \newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
 \newcommand*{\bb}[1]{\textbf{\hbox{#1}}}
 
+%% \newcommand*{\pic}[1]{\raisebox{-0.25em}{\makebox[1.5em]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}}}
+\newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
+
 \begin{document}
-\makecvtitle
+
+%% \makecvtitle
+
+\centering{%
+  \namestyle{Алексей~Уйманов}
+
+  \addressfont\color{color2}%
+  Россия, Тюмень
+}
+
+\bigskip
+
+\hbox{
+\parbox[t]{0.7\linewidth}{
+  \begin{itemize}
+  \item[\pic{Octocat}] \hlink{https://github.com/s9gf4ult}
+  \item[\pic{bucket}] \hlink{https://bitbucket.org/s9gf4ult}
+  \item[\pic{haskell}] \hlink{http://hackage.haskell.org/user/AlekseyUymanov}
+  \end{itemize}
+}%
+\parbox[t]{0.3\linewidth}{
+  \begin{itemize}
+  \item[\mobilephonesymbol] \href{tel:+7-932-470-79-15}{+7 932-470-79-15}
+  \item[\emailsymbol] \href{mailto:s9gf4ult@gmail.com}{s9gf4ult@gmail.com}
+  \item[\pic{xmpp}}] \href{xmpp:segfault@jabber.ru}{segfault@jabber.ru}
+  \item[\pic{skype}] \href{skype:s9gf4ult}{s9gf4ult}
+  \end{itemize}
+}}
 
 \section{Опыт работы}
 
@@ -56,9 +86,9 @@
     \bb{oauth2-server} (\bb{Yesod} subsite) и непосредственно сервис,
     к которому подключен \bb{oauth2-server}.
   \item Сделал пакет для удобной (и безопасной) генерации SQL-запросов
-    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. По
-    сути, интерполирующий квазиквотер SQL-запросов с зачатками
-    ORM. Работает через \bb{postgresql-simple}
+    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Интерполирующий
+    квазиквотер SQL-запросов с ORM-подобной
+    функциональностью. Работает через \bb{postgresql-simple}
   \item Переписал пакет
     \nlink{http://hackage.haskell.org/package/OTP}{OTP} с
     использвоанием \bb{cryptohash}:
@@ -101,12 +131,12 @@
 }
 
 \cventry{2007 -- 2009}{Инженер конструктор}{ОАО Сибнефтемаш}{Тюмень}{}{%
-  Прочностной расчет технологических емкостей, конструкций
+  Прочностной расчет технологических емкостей, конструкций.
 }
 
 \cventry{2006 -- 2007}{Системный администратор}{МУПГТ Тюменьгортранс}{Тюмень}{}{}
 
-\newpage
+%% \newpage
 
 \section{Умения}
 
@@ -126,7 +156,7 @@
   \item Scotty: применял для написания сервиса генерации PDF файлов для AdTel.
   \item QuicCheck/SmallCheck: автоматизированное тестирование свойств
     программы
-  \item MonadBaseControl: знаю зачем нужно и могу написать инстанс \includegraphics[height=1.1ex]{Trollface_HD}
+  \item MonadBaseControl: знаю зачем нужно и могу написать инстанс \includegraphics[height=1ex]{Trollface.ps}
   \item Продвинутая магия типов: GADTs, TypeFamilies, RankNTypes
   \item Имею пакеты на \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{хакадже}
   \end{itemize}
