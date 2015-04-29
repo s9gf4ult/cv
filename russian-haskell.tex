@@ -47,6 +47,9 @@
 %% \newcommand*{\pic}[1]{\raisebox{-0.25em}{\makebox[1.5em]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}}}
 \newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
 
+\voffset=-0.3in
+\textheight=700pt
+
 \begin{document}
 
 %% \makecvtitle
@@ -54,11 +57,13 @@
 \centering{%
   \namestyle{Алексей~Уйманов}
 
+  \quotestyle{Haskell программист}
+
   \addressfont\color{color2}%
   Россия, Тюмень
 }
 
-\bigskip
+\medskip
 
 \hbox{
 \parbox[t]{0.7\linewidth}{
@@ -72,10 +77,12 @@
   \begin{itemize}
   \item[\mobilephonesymbol] \href{tel:+7-932-470-79-15}{+7 932-470-79-15}
   \item[\emailsymbol] \href{mailto:s9gf4ult@gmail.com}{s9gf4ult@gmail.com}
-  \item[\pic{xmpp}}] \href{xmpp:segfault@jabber.ru}{segfault@jabber.ru}
+  \item[\pic{xmpp}] \href{xmpp:segfault@jabber.ru}{segfault@jabber.ru}
   \item[\pic{skype}] \href{skype:s9gf4ult}{s9gf4ult}
   \end{itemize}
 }}
+
+\bigskip
 
 \section{Опыт работы}
 
@@ -170,15 +177,19 @@
   \item PyGtk
   \item Django
   \end{itemize}
-\item Ruby
+\item Ruby on Rails
   \begin{itemize}
-  \item Ruby on Rails и разнообразные сопутствующие пакеты (paperclip, simple\_form, devise ...)
+  \item haml, coffeescript, scss
+  \item rspec, factory\_girl, Faker
+  \item paperclip, simple\_form, devise, acts\_as\_commentable
   \end{itemize}
 \item Низкоуровневые интерфейсы к базам данных: освоил пока писал
   \nlink{http://hackage.haskell.org/package/hdbi}{hdbi}.
 \item SQL: на нормальном уровне знаю PostgreSQL и Sqlite, менее хорошо
   знаю MySql
 \item Пишу тесты: unit-тесты, property-тесты, интеграционные.
+\item Emacs / ELisp
+\item \LaTeX
 \item Git, Subversion
 \item Redmine, Slack
 \item Имею опыт удаленной работы: самоорганизация / самомотивация.
@@ -196,20 +207,12 @@
 \end{itemize}
 
 \section{Образование}
-\cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра прикладной механики}
+\cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра}
 
-\cventry{2003 -- 2007}{Бакалавр}{ТюмГНГУ}{Тюмень}{\textit{4.7/5}}{Кафедра прикладной механики}
-
-\section{Прочее}
-
-\begin{itemize}
-\item \LaTeX
-\item Emacs
-\item Хронический перфекционизм с ремиссиями
-\end{itemize}
+\cventry{2003 -- 2007}{Бакалавр}{ТюмГНГУ}{Тюмень}{\textit{4.7/5}}{}
 
 \section{Иностранные языки}
-\cvitemwithcomment{Английский}{}{Свободное чтение
+\cvitemwithcomment{Английский}{Beginer}{Свободное чтение
   документации и электронная переписка}
 
 
