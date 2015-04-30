@@ -42,7 +42,7 @@
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 \newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
-\newcommand*{\bb}[1]{\textbf{\hbox{#1}}}
+\newcommand*{\bb}[1]{\hbox{#1}}
 
 %% \newcommand*{\pic}[1]{\raisebox{-0.25em}{\makebox[1.5em]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}}}
 \newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
@@ -91,7 +91,7 @@
   \item Сделал сервис аутентификации по протоколу \bb{Oauth2}. Сервис
     в последствии был разбит на два пакета: подключаемый сервер-плагин
     \bb{oauth2-server} (\bb{Yesod} subsite) и непосредственно сервис,
-    к которому подключен \bb{oauth2-server}.
+    к которому подключен \bb{oauth2-server}
   \item Сделал пакет для удобной (и безопасной) генерации SQL-запросов
     \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Интерполирующий
     квазиквотер SQL-запросов с ORM-подобной
@@ -137,11 +137,11 @@
 }
 
 \cventry{2009 -- 2012}{Системный администратор}{ГАУ ТО Миац}{Тюмень}{}{%
-  Поддержка систем хранения, виртуальных машин.
+  Поддержка систем хранения, виртуальных машин
 }
 
 \cventry{2007 -- 2009}{Инженер конструктор}{ОАО Сибнефтемаш}{Тюмень}{}{%
-  Прочностной расчет технологических емкостей, конструкций.
+  Прочностной расчет технологических емкостей, конструкций
 }
 
 \cventry{2006 -- 2007}{Системный администратор}{МУПГТ Тюменьгортранс}{Тюмень}{}{}
@@ -156,18 +156,19 @@
 \item Haskell
   \begin{itemize}
   \item Template Haskell/QuasiQuoter: могу на \hbox{Template Haskell}
-    выводить инстансы, генерировать типы, выражения
-  \item Комбинаторные парсеры: могу на \hbox{parserc/attoparsec}
-    делать парсеры
-  \item Yesod: освоил фреймворк за время работы в AdTel, делал
-    пулл-реквесты, знаю внутреннее строение на хорошем уровне.
-  \item Scotty: применял для написания сервиса генерации PDF файлов для AdTel.
+    выводить инстансы, генерировать типы, выражения. Делать
+    квазиквотеры, наподобие
+    \nlink{http://hackage.haskell.org/package/shakespeare}{shakespeare}
+  \item Комбинаторные парсеры: parsec, attoparsec
+  \item Yesod: знаю внутреннее строение на хорошем уровне, делал пулл-реквесты
+  \item Scotty: применял для написания сервиса генерации PDF файлов для AdTel
   \item QuicCheck, SmallCheck: автоматизированное тестирование свойств
     программы
   \item MonadBaseControl: знаю зачем нужно и могу написать инстанс \includegraphics[height=0.9ex]{Trollface.ps}
   \item Продвинутая магия типов: GADTs, TypeFamilies, RankNTypes
+  \item Профилирование, устранение space leaks
   \item Имею пакеты на \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{хакадже}
-  \item В хаскеле с 2013 года.
+  \item В хаскеле с 2013 года
   \end{itemize}
 \item Web
   \begin{itemize}
@@ -186,7 +187,7 @@
   \item paperclip, simple\_form, devise, acts\_as\_commentable
   \end{itemize}
 \item Низкоуровневые интерфейсы к базам данных: освоил пока писал
-  \nlink{http://hackage.haskell.org/package/hdbi}{hdbi}.
+  \nlink{http://hackage.haskell.org/package/hdbi}{hdbi}
 \item SQL: на нормальном уровне знаю PostgreSQL и Sqlite, менее хорошо
   знаю MySql
 \item Пишу тесты: unit-тесты, property-тесты, интеграционные.
@@ -194,7 +195,7 @@
 \item \LaTeX
 \item Git, Subversion
 \item Redmine, Slack
-\item Имею опыт удаленной работы: самоорганизация / самомотивация.
+\item Имею опыт удаленной работы: самоорганизация / самомотивация
 \end{itemize}
 
 \subsection{Администрирование}
