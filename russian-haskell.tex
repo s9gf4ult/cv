@@ -21,11 +21,11 @@
 \setdefaultlanguage[spelling=modern]{russian}
 \setotherlanguage{english}
 
-\newfontfamily\cyrillicfonttt{Liberation Sans}
-\newfontfamily\cyrillicfont{Liberation Sans}
+\newfontfamily\cyrillicfonttt{DejaVu Sans}
+\newfontfamily\cyrillicfont{DejaVu Sans}
 
-\newfontfamily\englishfonttt{Liberation Sans}
-\newfontfamily\englishfont{Liberation Sans}
+\newfontfamily\englishfonttt{DejaVu Sans}
+\newfontfamily\englishfont{DejaVu Sans}
 
 
 \name{Алексей}{Уйманов}
@@ -40,14 +40,14 @@
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 \newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
 \newcommand*{\bb}[1]{\hbox{#1}}
-\newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
+\newcommand*{\pic}[1]{\includegraphics[height=1em,keepaspectratio=true]{#1}}
 
-\voffset=-1in
+\voffset=-0.8in
 \topmargin=0cm
-\hoffset=-0.5in
+\hoffset=-0.8in
 
-\textheight=260mm
-\textwidth=170mm
+\textheight=255mm
+\textwidth=175mm
 
 
 \begin{document}
@@ -87,7 +87,7 @@
 \cventry{2014 -- Сейчас}{Haskell программист}{AdTel}{Удаленная работа}{}{}{%
   \begin{itemize}
   \item Сделал сервис аутентификации по протоколу \bb{Oauth2}. Сервис
-    в последствии был разбит на два пакета: подключаемый сервер-плагин
+    в последствии был разбит на два \hbox{пакета}: подключаемый сервер-плагин
     \bb{oauth2-server} (\bb{Yesod} subsite) и непосредственно сервис,
     к которому подключен \bb{oauth2-server}.
   \item Сделал пакет для удобной (и безопасной) генерации SQL-запросов
@@ -149,7 +149,7 @@
 
 \cventry{2006 -- 2007}{Системный администратор}{МУПГТ Тюменьгортранс}{Тюмень}{}{}
 
-\newpage
+%% \newpage
 
 \section{Умения}
 
@@ -217,8 +217,6 @@
 \cventry{2007 -- 2009}{Магистр}{ТюмГНГУ}{Тюмень}{\textit{4.8/5}}{Кафедра прикладной механики.}
 
 \cventry{2003 -- 2007}{Бакалавр}{ТюмГНГУ}{Тюмень}{\textit{4.7/5}}{Кафедра прикладной механики.}
-
-\enlargethispage{2em}
 
 \section{Прочее}
 \cvitemwithcomment{Английский}{Beginer}{Свободное чтение
