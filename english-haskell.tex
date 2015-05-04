@@ -25,9 +25,45 @@
 \title{A Haskeller}
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
+\newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
+\newcommand*{\bb}[1]{\hbox{#1}}
+\newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
+
 
 \begin{document}
-\makecvtitle
+
+\begin{center}
+  \namestyle{Aleksey~Uymanov}
+
+  \medskip
+
+  \quotestyle{Haskeller}
+
+  \addressfont\color{color2}%
+  Russia, Tyumen
+\end{center}
+
+\medskip
+
+\hbox{
+\parbox[t]{0.75\linewidth}{
+  \begin{itemize}
+  \item[\pic{Octocat}] \hlink{https://github.com/s9gf4ult}
+  \item[\pic{bucket}] \hlink{https://bitbucket.org/s9gf4ult}
+  \item[\pic{haskell}] \hlink{http://hackage.haskell.org/user/AlekseyUymanov}
+  \end{itemize}
+}%
+\parbox[t]{0.25\linewidth}{
+  \begin{itemize}
+  \item[\mobilephonesymbol] \href{tel:+7-932-470-79-15}{+7 932-470-79-15}
+  \item[\emailsymbol] \href{mailto:s9gf4ult@gmail.com}{s9gf4ult@gmail.com}
+  \item[\pic{xmpp}] \href{xmpp:segfault@jabber.ru}{segfault@jabber.ru}
+  \item[\pic{skype}] \href{skype:s9gf4ult}{s9gf4ult}
+  \end{itemize}
+}}
+
+\bigskip
+
 
 \section{Personal}
 \cvitem{Age}{27}
