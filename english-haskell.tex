@@ -6,41 +6,27 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-% moderncv themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{banking}
+\moderncvcolor{blue}
 
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 \usepackage{fullpage}
-%% \usepackage{hyperref}
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
-% adjust the page margins
 \usepackage[scale=0.79]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-% personal data
 \name{Aleksey}{Uymanov}
-\address{Russian Federation}{Tyumen}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+7 932-470-79-15}                   % optional, remove / comment the line if not wanted
-\email{s9gf4ult@gmail.com}                               % optional, remove / comment the line if not wanted
+\address{Russian Federation}{Tyumen}{}
+\phone[mobile]{+7 932-470-79-15}
+\email{s9gf4ult@gmail.com}
 \jabber{segfault@jabber.ru}
 \homepage{http://www.haskellers.com/user/AlekseyUymanov}
 \title{A Haskeller}
-%% \quote{a Haskell programmer}                                 % optional, remove / comment the line if not wanted
-
 
 \newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
 
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Personal}
@@ -91,7 +77,7 @@
     {2013}{Haskell}{HDBI-sqlite}{\hlink{https://github.com/s9gf4ult/hdbi-sqlite}}{}
     {SQlite3 driver for HDBI.}
 
-\cventry    
+\cventry
     {2013}{Haskell}{HDBI-conduit}{\hlink{https://github.com/s9gf4ult/hdbi-conduit}}{}
     {Conduit streamers for HDBI}
 
