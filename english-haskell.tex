@@ -11,8 +11,6 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-%% \usepackage[utf8]{inputenc}
-%% \usepackage{fullpage}
 \usepackage{polyglossia}
 \usepackage{fontspec}
 \usepackage{xunicode}
@@ -20,12 +18,14 @@
 \usepackage{amssymb}
 
 \defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
-\setdefaultlanguage{english}
+\setdefaultlanguage[variant=us]{english}
 
-\newfontfamily\cyrillicfonttt{DejaVu Sans}
+\newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+\newfontfamily\cyrillicfontsf{DejaVu Serif}
 \newfontfamily\cyrillicfont{DejaVu Sans}
 
-\newfontfamily\englishfonttt{DejaVu Sans}
+\newfontfamily\englishfonttt{DejaVu Sans Mono}
+\newfontfamily\englishfontsf{DejaVu Serif}
 \newfontfamily\englishfont{DejaVu Sans}
 
 
@@ -46,7 +46,7 @@
 \topmargin=0cm
 \hoffset=-0.8in
 
-\textheight=252mm
+\textheight=255mm
 \textwidth=175mm
 
 
@@ -112,7 +112,7 @@
   \begin{itemize}
   \item Participation in development of big project
   \item Used git-flow
-  \item Closed N tasks
+  \item Closed N tasks in tracker
   \end{itemize}
 }
 
@@ -167,7 +167,7 @@
   \item Advanced types: GADTs, TypeFamilies, RankNTypes.
   \item Profiling, space leaks elimination
   \item Maintaining package on
-    \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{хакадже}.
+    \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{hackage}.
   \item Using Haskell since 2013
   \end{itemize}
 \item Web
