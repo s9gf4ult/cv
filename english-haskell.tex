@@ -69,8 +69,22 @@
 
 \cventry{2014 -- Current}{Haskell programmer}{AdTel}{Remote}{}{}{%
   \begin{itemize}
-  \item Implemented authentication service using protocol \bb{Oauth2}.
-
+  \item Implemented authentication service using \bb{Oauth2}
+    protocol. Oauth2 server was later implemented in separate package
+    as Yesod subsite
+  \item Implemented package for convenient and safe SQL query
+    generation
+    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Package
+    contains interpolating quasiquoter for SQL queries and ORM-like
+    functionality.
+  \item Reimplemented
+    \nlink{http://hackage.haskell.org/package/OTP}{OTP} with
+    \bb{cryptohash}:
+  \item Implemented package for convenient Redis connection access
+    from Haskell
+    \nlink{http://hackage.haskell.org/package/hedis-monadic}{hedis-monadic}.
+  \item Authomated building and deploy with
+    \nlink{http://hackage.haskell.org/package/shake}{shake}.
   \end{itemize}
 }
 
