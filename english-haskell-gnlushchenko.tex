@@ -1,0 +1,224 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amssymb}
+
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setdefaultlanguage[variant=us]{english}
+
+\newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+\newfontfamily\cyrillicfontsf{DejaVu Serif}
+\newfontfamily\cyrillicfont{DejaVu Sans}
+
+\newfontfamily\englishfonttt{DejaVu Sans Mono}
+\newfontfamily\englishfontsf{DejaVu Serif}
+\newfontfamily\englishfont{DejaVu Sans}
+
+
+\name{Aleksey}{Uymanov}
+\address{Russian Federation}{Tyumen}{}
+\phone[mobile]{+7 932-470-79-15}
+\email{s9gf4ult@gmail.com}
+\jabber{segfault@jabber.ru}
+\homepage{http://www.haskellers.com/user/AlekseyUymanov}
+\title{A Haskeller}
+
+\newcommand*{\hlink}[1]{\textcolor{blue}{\texttt{\underline{\href{#1}{#1}}}}}
+\newcommand*{\nlink}[2]{\textcolor{blue}{\texttt{\underline{\href{#1}{#2}}}}}
+\newcommand*{\bb}[1]{\hbox{#1}}
+\newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
+
+\voffset=-0.8in
+\topmargin=0cm
+\hoffset=-0.8in
+
+\textheight=255mm
+\textwidth=175mm
+
+
+\begin{document}
+
+\begin{center}
+  \namestyle{Aleksey~Uymanov}
+
+  \medskip
+
+  \quotestyle{Haskeller}
+
+  \addressfont\color{color2}%
+  Russia, Tyumen
+\end{center}
+
+\medskip
+
+\hbox{
+\parbox[t]{0.75\linewidth}{
+  \begin{itemize}
+  \item[\pic{Octocat}] \hlink{https://github.com/s9gf4ult}
+  \item[\pic{bucket}] \hlink{https://bitbucket.org/s9gf4ult}
+  \item[\pic{haskell}] \hlink{http://hackage.haskell.org/user/AlekseyUymanov}
+  \end{itemize}
+}%
+\parbox[t]{0.25\linewidth}{
+  \begin{itemize}
+  \item[\mobilephonesymbol] \href{tel:+7-932-470-79-15}{+7 932-470-79-15}
+  \item[\emailsymbol] \href{mailto:s9gf4ult@gmail.com}{s9gf4ult@gmail.com}
+  \item[\pic{xmpp}] \href{xmpp:segfault@jabber.ru}{segfault@jabber.ru}
+  \item[\pic{skype}] \href{skype:s9gf4ult}{s9gf4ult}
+  \end{itemize}
+}}
+
+\bigskip
+
+
+\section{Experience}
+
+\cventry{2014 -- Current}{Haskell programmer}{AdTel}{Remote}{}{}{%
+  \begin{itemize}
+  \item Implemented authentication service using \bb{Oauth2}
+    protocol. Oauth2 server was later implemented in separate package
+    as Yesod subsite
+  \item Implemented package for convenient and safe SQL query
+    generation
+    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Package
+    contains interpolating quasiquoter for SQL queries and ORM-like
+    functionality.
+  \item Reimplemented
+    \nlink{http://hackage.haskell.org/package/OTP}{OTP} with
+    \bb{cryptohash}:
+  \item Implemented package for convenient Redis connection access
+    from Haskell
+    \nlink{http://hackage.haskell.org/package/hedis-monadic}{hedis-monadic}.
+  \item Authomated building and deploy with
+    \nlink{http://hackage.haskell.org/package/shake}{shake}.
+  \end{itemize}
+}
+
+\cventry{2014}{Ruby on Rails programmer}{Michael Kechinov's studio}{Remote}{}{%
+  \begin{itemize}
+  \item Participation in development of big project
+  \item Used git-flow
+  \item Closed N tasks in tracker
+  \end{itemize}
+}
+
+\cventry{2013 -- 2014}{Programmer}{CyberStep}{Tyumen}{}{%
+  Developing software for plasma cuttung machine
+  \begin{itemize}
+  \item CNC GUI (Python, Tcl, C)
+    \begin{itemize}
+    \item Implemented cutting parameters database for CNC
+    \item Implemented cutting parameters interpolation module for
+      angular cutting mode
+    \item Routine tasks, bug fixing
+    \end{itemize}
+  \item Forked Fat Free CRM, added commercial offers generator\\
+    \hlink{https://github.com/s9gf4ult/fat\_free\_crm/tree/commoffers}.
+  \end{itemize}
+}
+
+\cventry{2012 -- 2013}{Web developer}{Iris Integration}{Tyumen}{}{%
+  \begin{itemize}
+  \item Developed authomated offline voting system on Ruby on Rails
+  \item Modfied Mediawiki engine for site about city attractions
+  \end{itemize}
+}
+
+\cventry{2009 -- 2012}{System administrator}{SAU TO MIAC}{Tyumen}{}{%
+  Support of data storage systems and virtual servers
+}
+
+\cventry{2007 -- 2009}{Design Engineer}{Jsc Sibneftemash} {Tyumen}{}{
+  Calculation of the design of process tanks
+}
+
+\cventry{2006 -- 2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
+
+\section {Computer skills}
+
+\subsection{Programming}
+
+\begin{itemize}
+\item Haskell
+  \begin{itemize}
+  \item Template Haskell/QuasiQuoter: infering instances, generating
+    types and expressions. Implementing quasiqoters like
+    \nlink{http://hackage.haskell.org/package/shakespeare}{shakespeare}.
+  \item Combinatorial parsers: parsec, attoparsec
+  \item Yesod: good framework knowledge
+  \item Scotty: applied several times
+  \item QuickCheck, SmallCheck: authomated program properties testing
+  \item MonadBaseControl: know what it is and can write instance
+    \includegraphics[height=0.9ex]{Trollface.ps}
+  \item Advanced types: GADTs, TypeFamilies, RankNTypes.
+  \item Profiling, space leaks elimination
+  \item Maintaining package on
+    \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{hackage}.
+  \item Using Haskell since 2013
+  \end{itemize}
+\item Web
+  \begin{itemize}
+  \item CSS: Bootstrap, Blueprint CSS.
+  \item JavaScript: JQuery, AngularJS.
+  \end{itemize}
+\item Python
+  \begin{itemize}
+  \item PyGtk.
+  \item Django.
+  \end{itemize}
+\item Ruby on Rails
+  \begin{itemize}
+  \item haml, coffeescript, scss.
+  \item rspec, factory\_girl, Faker.
+  \item paperclip, simple\_form, devise, acts\_as\_commentable.
+  \end{itemize}
+\item SQL: good knowledge of PostgreSQL and Sqlite, adequately MySql
+\item Writing tests: unit-tests, property-tests, integration-tests
+\item Emacs / ELisp.
+\item \LaTeX.
+\item Git, Subversion.
+\item Redmine, Slack.
+\item Remote work experience: self-organization / self-motivation
+\end{itemize}
+
+\subsection{System administration}
+
+\begin{itemize}
+\item Linux.
+\item Apache, nginx, Varnish, Squid.
+\item Storage: LVM, RAID, iSCSI.
+\item Network: iptables, ip, tc.
+\item Virtualization: libvirt, kvm.
+\end{itemize}
+
+\section{Education}
+
+\cventry{2007 -- 2009}{Master}{Tyumen Oil and Gas Institute}{Tyumen}{\textit{4.8/5}}{Department of Applied Mechanics}
+\cventry{2003--2007}{Bachelor}{Tyumen Oil and Gas Institute}{Tyumen}{\textit{4.7/5}}{Department of Applied Mechanics}
+
+\section{Languages}
+
+\cvitemwithcomment{Russian}{Native}{}
+\cvitemwithcomment{English}{Beginer}{Good reading and writing, low verbal skills}
+
+\section{Other}
+
+\cvitemwithcomment{Location}{Russia, Tyumen}{Relocation can be discussed}
+\cvitemwithcomment{Age}{28}{}
+
+\nocite{*}
+\end{document}
