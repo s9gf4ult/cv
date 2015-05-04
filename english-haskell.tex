@@ -11,10 +11,23 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-\usepackage[utf8]{inputenc}
-\usepackage{fullpage}
+%% \usepackage[utf8]{inputenc}
+%% \usepackage{fullpage}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amssymb}
 
-\usepackage[scale=0.79]{geometry}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setdefaultlanguage{english}
+
+\newfontfamily\cyrillicfonttt{Liberation Sans}
+\newfontfamily\cyrillicfont{Liberation Sans}
+
+\newfontfamily\englishfonttt{Liberation Sans}
+\newfontfamily\englishfont{Liberation Sans}
+
 
 \name{Aleksey}{Uymanov}
 \address{Russian Federation}{Tyumen}{}
@@ -29,6 +42,12 @@
 \newcommand*{\bb}[1]{\hbox{#1}}
 \newcommand*{\pic}[1]{\includegraphics[height=1.1em,keepaspectratio=true]{#1}}
 
+\voffset=-1in
+\topmargin=0cm
+\hoffset=-0.5in
+
+\textheight=260mm
+\textwidth=170mm
 
 \begin{document}
 
@@ -127,7 +146,6 @@
 }
 
 \cventry{2006 -- 2007}{System administrator}{MUPGT "Tyumengortrans"}{Tyumen}{}{}
-
 
 \section {Computer skills}
 
