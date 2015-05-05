@@ -93,9 +93,9 @@
     \bb{oauth2-server} (\bb{Yesod} subsite) и непосредственно сервис,
     к которому подключен \bb{oauth2-server}.
   \item Сделал пакет для удобной (и безопасной) генерации SQL-запросов
-    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Интерполирующий
-    квазиквотер SQL-запросов с ORM-подобной
-    функциональностью. Работает через \bb{postgresql-simple}.
+    \nlink{http://hackage.haskell.org/package/postgresql-query}{postgresql-query}. Пакет
+    содержит интерполирующий квазиквотер SQL-запросов с ORM-подобной
+    функциональностью.
   \item Переписал пакет
     \nlink{http://hackage.haskell.org/package/OTP}{OTP} с
     использвоанием \bb{cryptohash}:
@@ -153,6 +153,8 @@
 
 %% \newpage
 
+\enlargethispage{\baselineskip}
+
 \section{Умения}
 
 \subsection{Программирование}
@@ -160,18 +162,21 @@
 \begin{itemize}
 \item Haskell
   \begin{itemize}
+  \item Typeclasses, monads, monad transformers, functional dependencies.
+  \item Arrows: ArrowApply, ArrowChoice.
+  \item Lens.
+  \item Провинутые типы: GADTs, TypeFamilies, RankNTypes, Existential datatypes.
   \item Template Haskell/QuasiQuoter: могу на \hbox{Template Haskell}
     выводить инстансы, генерировать типы, выражения. Делать
     квазиквотеры, наподобие
     \nlink{http://hackage.haskell.org/package/shakespeare}{shakespeare}.
   \item Комбинаторные парсеры: parsec, attoparsec.
   \item Yesod: знаю внутреннее строение на хорошем уровне, делал пулл-реквесты.
-  \item Scotty: применял для написания сервиса генерации PDF файлов для AdTel.
+  \item Scotty: применял пару раз.
   \item QuicCheck, SmallCheck: автоматизированное тестирование свойств
     программы.
   \item MonadBaseControl: знаю зачем нужно и могу написать инстанс
     \includegraphics[height=0.9ex]{Trollface.ps}
-  \item Продвинутая магия типов: GADTs, TypeFamilies, RankNTypes.
   \item Профилирование, устранение space leaks.
   \item Имею пакеты на
     \nlink{http://hackage.haskell.org/user/AlekseyUymanov}{хакадже}.
